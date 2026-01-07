@@ -70,3 +70,31 @@ Deals with the reading and opening of the video, storing the frames in a list wh
 It also plays a role in video editing, processing and writing, saving
 
 These two libraries work together to perform actions on the video, that then aid in template generation
+
+******************************************************************************************
+DAY 3//
+Today, I was really feeling bad so I wasn't able to do a lot
+
+But, I did something quite helpful. By practicing on my own I got to learn & understand some of my mistakes and the things I had worked on earlier in Day 2
+Day 3 and 4 exercise and learning will be combined plus I think I want to do more freellancing to learn , understand and visualize the concepts
+
+****************************************************************************************************
+Today,I beleive I did a lot.
+1. I was able to build and run code on my own regarding
+- Loading and frame extraction
+- Loop through the frame
+- Resizing the frame of the video
+- Time scaling of the video, as well as looping through the sliced frames
+
+I watched some tutorials as well on Numpy and Opencv. I believ I've gained a better understanding and have built confidence moving forward of the concepts
+I now understand how to implement the exercises, how the pipelines work and what to do with them
+
+I'm really happy and I thank God. 
+Slowly but surely, I feel like I'm making progress.
+In a matter of time, I will be able to build the software on my own.
+
+PS, I also experimented with concepts of masking, edge_detection and frame_manipulation with numpy.
+I've also, looked at some shot detcetion as well as motion_scores and understand the logic behind them.
+I also read about convolution kernels that play a role in image manipulation and editing
+
+I look forward to doing more tomorrow.
