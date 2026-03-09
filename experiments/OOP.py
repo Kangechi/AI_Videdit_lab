@@ -3,6 +3,7 @@ class Practice_class:
         self.name = name
         self.age = age
         self.status = status
+        self.meet()
 
     def meet(self):
         print("Welcome to the program, please introduce yourself")
@@ -17,5 +18,5 @@ class Practice_class:
         
 
 person = Practice_class("Kiboi", 17, "Visionary Leader")
-person.meet()
 person.knowmore("dancing", ["science", "storytelling","growth"], "Create AG-AI and Co-Creation")
+
