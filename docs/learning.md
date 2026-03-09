@@ -17,13 +17,13 @@ Then we kick off continuing learning, coding and mini-projects from Monday as I 
 Day Two - Saturday3rd
 Today I worked on wireframes for my videdit
 - I believe I came up with a nice framework of the design, focusing on intuitive design from other softwares but adding my on touch
-- I've also though of turning the multi-AI pipeline into individual features that can be used as well with pre-edited clips. Different from the single AI tools in other softwares in a way due to like:
+- I've also thought of turning the multi-AI pipeline into individual features that can be used as well with pre-edited clips. Different from the single AI tools in other softwares in a way due to like:
    1. Prompt engineering - still works with a pipeline that loads the video -> extracts frames -> understand the clips -> Applies the edit based on the applied prompt through LLM
    2. Template generation - it can pre - load the already generated templates and can be re-used
    3. Brand/User optimisation - able to make suggestions and recommendations based on the users style and preferences. Pattern recognition
    4. Social optimization - Change aspect ratio for different platform distribution
 
-Following the concept in tools for though - I also think I want to incorporate manual editing with AI aid and automation
+Following the concept in tools for thought - I also think I want to incorporate manual editing with AI aid and automation
 Currently only designing for desktop but will move forward to other platforms as I move forward
 
 For Revive Africa, 
@@ -62,7 +62,7 @@ Proud of myself
 I also worked with Numpy and OpenCV though not much, but the interactions has made me more aware of how video data is processed, how things work together plus the correlation between Opencv and Numpy
 
 For Numpy,
-- There are basic operations that I need to understand especially because they deal with the frame/image/video manipulation, editing, mathematical concepts(algorithmic concepts) that aid in motion detection, deyecting transitions etc
+- There are basic operations that I need to understand especially because they deal with the frame/image/video manipulation, editing, mathematical concepts(algorithmic concepts) that aid in motion detection, detecting transitions etc
 Operations such as slicing, indexing etc, all play a role in the whole process
 
 Opencv
@@ -98,3 +98,64 @@ I've also, looked at some shot detcetion as well as motion_scores and understand
 I also read about convolution kernels that play a role in image manipulation and editing
 
 I look forward to doing more tomorrow.
+*****************************************************************************************************
+Today, I did a lot.
+Though I was very tired in the morning
+1. I learnt on building of the video editing engine
+- Looking at feature one on teplate generation, I looked at all thealgorithmic step that have to be followed:
+     video frame loading and extrcation
+                 |
+     Shot boundary detection, through histogram differences algorthm
+                |
+     Feature extraction: time, duration, audio, motion, dominant colors etc
+                |
+     Build template: Integration of all the video_metadata in JSON format for the editor UI to initialize; editing options, application etc
+
+From there I also worked with building pipelines and writing code
+1. Worked  with an editing pipeline that taught me a lot
+- blur, edge_detection, masking, etc - A pipline that incorporates these editing decisions to aid in understanding
+- Look forward to a feature one pipeline tomorrow to conclude the week, as well as learning the incorporation of this engine I'm building to the UI and other workings to complete week 1
+
+****************************************************************************************************
+Friday, was KSCE results day, so alot was happening I didn't code.
+I also didn't code on Saturday.
+ I have a workloadpile then this week I may not have the laptopl but great news is that I may be getting one soon. 
+ So I'll work on offline things
+ Yeah so I beleive thats's the feedback I have for the end of the week as we start a new week.
+ Here we Go!!!!!!!!!!!!!!!!!!
+
+ *********************************************************************************************************
+ Being back after the offline approach- Its February now (10th Feb to be exact)
+ I see growth and progress though were not there yet; But I've really improved and gotten better
+
+ - Ive grown in OOP. Im able to use classes especially when writing code for videsit and the pipeline
+ - I'm familiarising myself with now working on the Frontend bit - using Tkinter forthe Graphical User interface
+ - I'm no longer stuck even in the GPT genearted code, I'm able to read it and manouvre through it.
+ - I'm able to understand the process.
+ > Over the period Videdit has also eveolved to accommodate my beliefs and design principles.
+ This pours out as:
+ 1. Transparency design - Its not a black box. The user is aware and informed of the processes in which the AI/System is operating through
+ 2. Co-evolution - The systems grows with the user and helps them grow.
+ 3. Augmentation thus no removal of manual editing but introduction of suggestion mechanisms into the system
+ 4. Human in the loop design - the user gets to edit, approve , validate and explore 
+ 5. Design for collaboration
+
+
+Thus I want to take us back to the drawing board kidogo bado as this will help even as I write my code:
+ - LEts break it down in layers
+ > Input/Asset/ Validation
+ - Here we have methods for taking the video file, validating it, registering it into the system and ensuring that it is correct - The first crucial part of the system that would destroy the downstream results
+ 
+ > Frame analysis/Analysis/signal/metric extraction
+ - This part deals with many aspects of signal extraction
+ the shots, motions, colour, cuts, etc- then for each an explanation is given for the scenes and signal extracted- Then the system also gives the user a visual suggestions to perhaps change anything and adjust it -
+ > Threshold/Decision design
+ Here, I want us to use adaptable threshold plus range thresholds.
+ This enables the system to react to different types of videos and also allows for graceful degradation of the system.
+ It enhance the descion flow of the system enabling user trust as well
+
+ >Template proposal:
+ The system uses the signal and decisons made in the earlier stages and utilises it to generate a templat that it suggests to the user to apply to their clips.
+ the user has accsess to edit the template features even as it is being generated and created.
+
+For now this is the plan before the month ends to build this as an MVP or by early March - with the inclusion of GUI

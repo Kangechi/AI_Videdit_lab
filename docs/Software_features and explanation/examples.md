@@ -15,7 +15,7 @@ For each feature: theory, tools/libraries, step-by-step implementation, code sni
 **Goal:** Given an uploaded video, produce a “template skeleton” (shots, pacing, transition types, text placeholders, color profile, suggested transition timings) that can be applied to other videos.
 
 ## Theory (short)
-
+ 
 A template = structured representation of the *editing decisions* in a video:
 
 * Shot boundaries (clips)
@@ -61,6 +61,12 @@ import json
 import os
 
 def extract_frames(video_path, max_frames=None, step=1):
+  """
+  The none assignment, displays that there is no limit.
+  Therefore telling the function to extract all the frames
+
+  The step is for frame skipping, with step assigngned as 1, it tells the function to extract all the frames. Then the step parameter included in the functions results into the use of a frame counter i =0
+  """
     cap = cv2.VideoCapture(video_path)
     frames = []
     i=0
@@ -116,42 +122,7 @@ def audio_energy_profile(video_path):
     os.remove(tmp)
     return times.tolist(), energy.tolist()
 
-def build_template(video_path, hist_thresh=0.55):
-    cuts, fps = shot_boundaries_by_hist(video_path, threshold=hist_thresh)
-    # add start & end
-    cap = cv2.VideoCapture(video_path)
-    frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    duration = frame_count / fps
-    cap.release()
-    cut_times = [0.0] + [c['time'] for c in cuts] + [duration]
-    shots=[]
-    for i in range(len(cut_times)-1):
-        start = cut_times[i]
-        end = cut_times[i+1]
-        shots.append({"start": start, "end": end, "duration": end-start})
-    # sample frames per shot for color
-    for s in shots:
-        cap = cv2.VideoCapture(video_path)
-        cap.set(cv2.CAP_PROP_POS_MSEC, s['start']*1000)
-        frames=[]
-        for _ in range(5):
-            ret, frame = cap.read()
-            if not ret: break
-            frames.append(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
-            cap.set(cv2.CAP_PROP_POS_MSEC, cap.get(cv2.CAP_PROP_POS_MSEC)+ ( (s['duration']/6)*1000 ))
-        cap.release()
-        s['dominant_colors'] = dominant_colors_of_shot(frames) if frames else []
-        s['motion_score'] = np.random.random() # placeholder (see motion calc below)
-    times, energy = audio_energy_profile(video_path)
-    template = {"duration": duration, "fps": fps, "shots": shots, "audio_energy_times": times, "audio_energy": energy}
-    return template
 
-if __name__=="__main__":
-    import sys
-    path = sys.argv[1]
-    tpl = build_template(path)
-    print(json.dumps(tpl, indent=2))
-```
 
 **How to run**:
 

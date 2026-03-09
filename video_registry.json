@@ -1,0 +1,29 @@
+{
+    "Twirl.mp4": {
+        "filename": "Twirl.mp4",
+        "path": "C:/Users/ADMIN/Desktop/Pacy/Twirl.mp4",
+        "duration": 11.564644444444443,
+        "resolution": [
+            1080,
+            1920
+        ]
+    },
+    "20251206_145728.mp4": {
+        "filename": "20251206_145728.mp4",
+        "path": "C:/Users/ADMIN/Desktop/Pacy/20251206_145728.mp4",
+        "duration": 7.633766666666667,
+        "resolution": [
+            1080,
+            1920
+        ]
+    },
+    "20251222_110312.mp4": {
+        "filename": "20251222_110312.mp4",
+        "path": "C:/Users/ADMIN/Desktop/Pacy/20251222_110312.mp4",
+        "duration": 5.302911111111111,
+        "resolution": [
+            1080,
+            1920
+        ]
+    }
+}

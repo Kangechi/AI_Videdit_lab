@@ -1,0 +1,54 @@
+{
+    "22541d34-821f-4858-abf0-33671f1833f0": {
+        "video_path": "C:/Users/ADMIN/Desktop/Pacy/Twirl.mp4",
+        "created_at": "2026-03-02 12:30:53",
+        "status": "uploaded",
+        "metadata": {
+            "duration": 11.564644444444443,
+            "fps": 29.918775424714024,
+            "resolution": [
+                1080,
+                1920
+            ]
+        }
+    },
+    "69a35086-6880-4d2d-be48-21bd41def718": {
+        "video_path": "C:/Users/ADMIN/Desktop/Pacy/20251222_110312.mp4",
+        "created_at": "2026-03-02 12:31:04",
+        "status": "uploaded",
+        "metadata": {
+            "duration": 5.302911111111111,
+            "fps": 29.79495539137832,
+            "resolution": [
+                1080,
+                1920
+            ]
+        }
+    },
+    "0845964f-cf92-4d68-b85e-08641d44b6dd": {
+        "video_path": "C:/Users/ADMIN/Desktop/Pacy/Twirl.mp4",
+        "created_at": "2026-03-02 12:41:54",
+        "status": "uploaded",
+        "metadata": {
+            "duration": 11.564644444444443,
+            "fps": 29.918775424714024,
+            "resolution": [
+                1080,
+                1920
+            ]
+        }
+    },
+    "04555ab2-97b8-4f46-920d-7ed3188baa9a": {
+        "video_path": "C:/Users/ADMIN/Desktop/Pacy/20251206_145728.mp4",
+        "created_at": "2026-03-02 12:41:59",
+        "status": "uploaded",
+        "metadata": {
+            "duration": 7.633766666666667,
+            "fps": 29.343312388379697,
+            "resolution": [
+                1080,
+                1920
+            ]
+        }
+    }
+}
